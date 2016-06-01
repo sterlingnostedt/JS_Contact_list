@@ -1,27 +1,60 @@
 <div class="container">
-    <div class="row">
-        <div class="contact-list col-sm-5 col-xs-5">
-          <form class="search-input">
-            <input type="text" class="search" placeholder="Search All Contacts"></form>
-            <ul class="list-of-contacts"></ul>
-          </form>
-        </div>
-        <div class="contact-info col-sm-7 col-xs-7">
-          <div class="row">
-            <div class="col-md-12" align="center">
-              <div class="contact-info-details">
-              </div>
-              <div class="contact-add-container">
-              <form id="add-contact">
-                <input type="text" class="firstname" placeholder="First Name" /><br/>
-                <input type="text" class="lastname" placeholder="Last Name" /><br/>
-                <input type="text" class="phonenumber" placeholder="Phone Number" /><br/>
-                <input type="text" class="emailaddress" placeholder="Email Address"/><br/><br/>
-                <input class="add-contact-submit" type="submit" value="Submit" />
-              </form>
-            </div>
-          </div>
-        </div>
+  <div class="col-md-12 column">
+    <div class="well">
+      <h1>
+        Contact List of the Year
+      </h1>
+      <p>
+
+      </p>
+      <p>
+
+      </p>
+
+      <p>
+        <a class="btn btn-success" id="createContact" data-target="createForm" href="#">Create a Contact</a>
+        <a class="btn btn-info" id="listContacts" data-target="listFunction" href="#">List All Contacts</a>
+        <a class="btn btn-warning" id="searchContacts" data-target="search" href="#">Search Contacts</a>
+        <a class="btn btn-danger" id="deleteContacts" data-target="delete href="#">Delete Contact</a>
+      </p>
     </div>
+
+    <div id="controlArea">
+      <div id="createForm"  style="display:none" class="well">
+        <h3> Create a Contact </h3>
+          First Name:<br>
+          <input type="text" class="form-control" id="first_name">
+          <br>
+          Last Name:<br>
+          <input type="text" class="form-control" id="last_name">
+          <br>
+          Phone:<br>
+          <input type="text" class="form-control" id="phone_num">
+          <br>
+          Email:<br>
+          <input type="text" class="form-control" id="email">
+          <br>
+          <button class="btn btn-primary" id="createSubmit"> Submit </button>
+      </div>
+      
+      <div id="search" style="display:none" class="well">
+        <h3> Search</h3>
+          <input type="text" class="form-control" id="query">
+          <br>
+        <button class="btn btn-primary" id="searchSubmit"> Submit </button>
+      </div>
+
+      <div id="displayRecord" style="display:none" class="well">
+        <h3> Enter a Contact ID</h3>
+          ID:<br>
+          <input type="text" class="form-control"  id="idSearch">
+          <br>
+        <button class="btn btn-primary" id="displayRecordButton"> Submit </button>
+      </div>
+    </div>
+
+    <div id="results" style="display:none" class="well">
+    </div>
+
+  </div>
 </div>
-<div class="add-new-contact"><a class="add-new" href="#">+</a></div>
